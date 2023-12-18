@@ -1,3 +1,8 @@
+resource "azurerm_resource_group" "example" {
+  name     = "kogoon"
+  location = "Southeast Asia"
+}
+
 module "network" {
   source  = "Azure/network/azurerm"
   version = "3.5.0"
@@ -16,4 +21,5 @@ module "network" {
     costcenter  = "it"
   }
 
+  depends_on = [azurerm_resource_group.example]
 }
