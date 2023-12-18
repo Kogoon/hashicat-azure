@@ -1,5 +1,5 @@
 module "network" {
-  source  = "app.terraform.io/chip-seojun/network/azurerm"
+  source  = "Azure/network/azurerm"
   version = "3.5.0"
   resource_group_name = azurerm_resource_group.example.name
   address_spaces      = ["10.0.0.0/16", "10.2.0.0/16"]
